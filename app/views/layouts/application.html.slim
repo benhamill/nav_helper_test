@@ -1,0 +1,40 @@
+doctype html
+html
+  head
+    title Nav helper Test
+    = stylesheet_link_tag 'application', media: 'all'
+    = javascript_include_tag 'application'
+    = csrf_meta_tags
+  body
+    header.navbar.navbar-fixed-top
+      .navbar-inner
+        .container
+          = link_to "Nav Helper", root_path, class: 'brand'
+
+          nav
+            ul.nav
+              li class=NavHelper.for(:settings) = link_to 'Settings', settings_path
+              li class=NavHelper.for(:apps) = link_to 'Apps', apps_path
+
+    section#main-wide
+      .container
+        section#main
+          section#notifications.row
+            - if notice
+              .span12
+                .alert.alert-success
+                  = alert_close
+                  = notice
+            - if alert
+              .span12
+                .alert.alert-error
+                  = alert_close
+                  = alert
+
+          section.main
+            = yield
+
+    section#footer_wide
+      .container
+        footer
+            p.muted A footer!
