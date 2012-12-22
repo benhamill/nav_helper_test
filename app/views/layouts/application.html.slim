@@ -33,7 +33,7 @@ html
                   = alert
 
           section.main
-            = yield
+            = content_for?(:main) ?  yield(:main) : yield
 
     section#footer_wide
       .container

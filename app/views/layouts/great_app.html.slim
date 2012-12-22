@@ -1,0 +1,15 @@
+= content_for(:main) do
+  .page-header
+    h1
+      | Great App
+      - if content_for?(:subhead)
+        small= yield(:subhead)
+  .row
+    .span3
+      ul.nav.nav-tabs.nav-stacked
+        li= link_to 'Settings', great_app_settings_path
+
+    .span9
+      = yield
+
+= render template: 'layouts/application'

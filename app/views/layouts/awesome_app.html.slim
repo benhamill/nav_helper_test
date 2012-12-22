@@ -1,0 +1,16 @@
+= content_for(:main) do
+  .page-header
+    h1
+      | Awesome App
+      - if content_for?(:subhead)
+        small= yield(:subhead)
+  .row
+    .span3
+      ul.nav.nav-tabs.nav-stacked
+        li= link_to 'Settings', awesome_app_settings_path
+        li= link_to 'History', awesome_app_history_path
+
+    .span9
+      = yield
+
+= render template: 'layouts/application'

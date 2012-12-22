@@ -1,5 +1,5 @@
 module AwesomeApp
-  class SettingsController < AwesomeAppController
+  class HistoryController < AwesomeAppController
     def index
     end
   end

@@ -1,5 +1,5 @@
 module GreatApp
-  class SettingsController < ApplicationController
+  class SettingsController < GreatAppController
     def index
     end
   end
