@@ -1,0 +1,30 @@
+.page-header
+  h1 Great App Settings
+
+form.form-horizontal method="GET"
+  .control-group
+    label.control-label for="email_frequency" Email me every
+    .controls
+      select#email_frequency
+        option Never
+        option Day
+        option selected="selected" Week
+        option Month
+
+  .control-group
+    label.control-label for="pattern" Great matching
+    .controls
+      input#pattern type="text" value=".*great.*"
+
+  .control-group
+    .controls
+      label.checkbox
+        input type="checkbox" checked="checked" Do the great thing.
+
+  .control-group
+    .controls
+      label.checkbox
+        input type="checkbox" Do the other great thing.
+
+  .control-group
+    button.btn.btn-primary type="submit" Save

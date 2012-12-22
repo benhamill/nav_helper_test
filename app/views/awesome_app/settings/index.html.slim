@@ -1,0 +1,30 @@
+.page-header
+  h1 Awesome App Settings
+
+form.form-horizontal method="GET"
+  .control-group
+    label.control-label for="email_frequency" Email me every
+    .controls
+      select#email_frequency
+        option Never
+        option Day
+        option selected="selected" Week
+        option Month
+
+  .control-group
+    label.control-label for="pattern" Awesome matching
+    .controls
+      input#pattern type="text" value=".*awesome.*"
+
+  .control-group
+    .controls
+      label.checkbox
+        input type="checkbox" checked="checked" Do the awesome thing.
+
+  .control-group
+    .controls
+      label.checkbox
+        input type="checkbox" Do the other awesome thing.
+
+  .control-group
+    button.btn.btn-primary type="submit" Save
