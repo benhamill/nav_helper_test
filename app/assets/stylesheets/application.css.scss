@@ -14,9 +14,16 @@
 
 @import "bootstrap";
 
-body.settings .nav .settings,
-body.awesome_app .nav .awesome_app,
-body.great_app .nav .great_app {
+body.sub_settings .sub.nav-tabs > .settings > a,
+body.sub_history .sub.nav-tabs > .history > a {
+  color: $gray;
+  background-color: $bodyBackground;
+  cursor: default;
+}
+
+body.settings .navbar .nav .settings,
+body.awesome_app .navbar .nav .awesome_app,
+body.great_app .navbar .nav .great_app {
   @extend .active;
 }
 
