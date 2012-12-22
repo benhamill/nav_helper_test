@@ -4,12 +4,18 @@ This is a test of an idea to make setting the active class on navigation tabs
 easier and clearer.
 
 
-## Check It Out
+## This Branch
 
-Each branch in this repo is trying something different. Most start from the
-basis that master provides: A few controllers, some nested, a nav bar and a
-sub-nav bar (only on some pages). Hopefully, each branch will make the right
-tabs active for the right pages.
+This branch attempts to set active navigation tabs based on the controller that
+it's in. The mechanism is by setting classes on body that match the class of the
+active nav tab, then writing scss to `@extend` the `.active` selector. Check out
+the top of `application.css.scss` for the style.
+
+The idea is that the `::SettingsController` should activate the top nav
+'Settings', any controller in the `AwesomeApp` should activate the top nav
+'Awesome App' and any controller in the `GreatApp` module should activate the
+top nav 'Great App'. For those pages with left nav, each page should activate
+the tab with it's same name, each one is in its own controller.
 
 
 ## Helping Out
