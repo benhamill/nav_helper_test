@@ -9,7 +9,10 @@ easier and clearer.
 This branch attempts to set active navigation tabs based on the controller that
 it's in. The mechanism is by setting classes on body that match the class of the
 active nav tab, then writing scss to `@extend` the `.active` selector. Check out
-the top of `application.css.scss` for the style.
+the top of `application.css.scss` for the styles.
+
+The `<body>`'s class is set via a helper in the `ApplicationHelper`, which does
+some naive parsing of the `controller_path`.
 
 The idea is that the `::SettingsController` should activate the top nav
 'Settings', any controller in the `AwesomeApp` should activate the top nav
